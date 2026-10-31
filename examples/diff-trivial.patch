@@ -1,0 +1,12 @@
+diff --git a/README.md b/README.md
+index 0a1b2c3..1d2e3f4 100644
+--- a/README.md
++++ b/README.md
+@@ -40,7 +40,7 @@ Installation
+ 
+ ## Quick start
+ 
+-Sentinel-AI is an code review pipeline that guard your main branch.
++Sentinel-AI is a code review pipeline that guards your main branch.
+ 
+ Run `npm run demo` to see the three-system pipeline in action.

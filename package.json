@@ -1,0 +1,51 @@
+{
+  "name": "dsh-sentinel-ai",
+  "version": "1.0.0",
+  "description": "Sentinel-AI: dual-system async code review pipeline - System 1 instant gate (Jev-style Choice/Score/Noul), System 2 deep review (deterministic AST + anti-hallucination LLM) and a Redis-backed timeout state machine. Pure Node.js + TypeScript, zero native modules, Windows 7 friendly.",
+  "license": "MIT",
+  "author": "Sentinel-AI Contributors",
+  "keywords": [
+    "code-review",
+    "static-analysis",
+    "ast",
+    "state-machine",
+    "redis",
+    "llm",
+    "sentinel",
+    "dsh"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "sentinel": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "cli": "node dist/cli.js",
+    "demo": "npm run build && node dist/cli.js demo",
+    "demo:slow-llm": "node dist/cli.js demo --simulate llm-slow",
+    "demo:llm-error": "node dist/cli.js demo --simulate llm-error",
+    "test": "npm run build && node dist/smoke.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^8.0.0",
+    "@babel/types": "^8.0.0"
+  },
+  "optionalDependencies": {
+    "ioredis": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

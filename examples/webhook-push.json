@@ -1,0 +1,42 @@
+{
+  "ref": "refs/heads/main",
+  "before": "9f8e7d6c5b4a392817263544f3e2d1c0b9a8976",
+  "after": "c3d4e5f60718293a4b5c6d7e8f9012345678ab",
+  "repository": {
+    "id": 79001234,
+    "name": "payments-core",
+    "full_name": "acme/payments-core",
+    "private": true,
+    "default_branch": "main"
+  },
+  "pusher": { "name": "dev-alice" },
+  "sender": { "login": "dev-alice" },
+  "commits": [
+    {
+      "id": "a1b2c3d4e5f60718293a4b5c6d7e8f9012345678",
+      "message": "docs: fix typo in README",
+      "added": ["README.md"],
+      "modified": [],
+      "removed": []
+    },
+    {
+      "id": "b2c3d4e5f60718293a4b5c6d7e8f9012345678a",
+      "message": "feat(auth): re-add legacy sign-in (quick win)",
+      "added": ["src/auth/legacy-login.js"],
+      "modified": [],
+      "removed": []
+    },
+    {
+      "id": "c3d4e5f60718293a4b5c6d7e8f9012345678ab",
+      "message": "feat(user): inline user lookup + report export",
+      "added": [],
+      "modified": ["src/services/user-service.js"],
+      "removed": []
+    }
+  ],
+  "head_commit": {
+    "id": "c3d4e5f60718293a4b5c6d7e8f9012345678ab",
+    "message": "feat(user): inline user lookup + report export",
+    "timestamp": "2026-10-31T12:00:00+08:00"
+  }
+}
